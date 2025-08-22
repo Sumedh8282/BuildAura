@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pune Metro — Official Info (Demo)</title>
+  <meta name="description" content="A clean, responsive single‑page Pune Metro website built with only HTML and CSS." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0e0f12;
+      --card:#16181d;
+      --muted:#8b93a1;
+      --text:#e8ecf1;
+      --brand:#7c3aed; /* purple */
+      --brand-2:#06b6d4; /* aqua */
+      --accent:#22c55e;
+      --warning:#eab308;
+      --danger:#ef4444;
+      --ring: rgba(124,58,237,.35);
+      --radius:20px;
+      --shadow: 0 10px 30px rgba(0,0,0,.35), 0 1px 0 rgba(255,255,255,.04) inset;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      background: radial-gradient(1200px 600px at 10% -10%, rgba(124,58,237,.25), transparent 60%),
+                  radial-gradient(1000px 600px at 110% 10%, rgba(6,182,212,.18), transparent 60%),
+                  var(--bg);
+      color:var(--text);
+      line-height:1.6;
+    }
+    a{color:inherit;text-decoration:none}
+    .container{width:min(1100px, 92vw); margin:0 auto}
+
+    /* Header */
+    header{
+      position:sticky; top:0; z-index:40;
+      backdrop-filter: saturate(160%) blur(10px);
+      background: linear-gradient(180deg, rgba(14,15,18,.85), rgba(14,15,18,.5));
+      border-bottom:1px solid rgba(255,255,255,.06);
+    }
+    .nav{display:flex; align-items:center; justify-content:space-between; padding:14px 0}
+    .logo{display:flex; align-items:center; gap:10px; font-weight:700; letter-spacing:.3px}
+    .logo-badge{width:34px; height:34px; border-radius:10px; background:
+      conic-gradient(from 0deg, var(--brand), var(--brand-2));
+      display:grid; place-items:center; color:white; font-weight:800}
+    .logo span{opacity:.9}
+    nav ul{display:flex; gap:18px; list-style:none; padding:0; margin:0}
+    nav a{padding:8px 12px; border-radius:10px; color:var(--muted)}
+    nav a:hover{background:rgba(255,255,255,.06); color:var(--text)}
+    .cta{padding:10px 14px; border-radius:12px; background:linear-gradient(135deg, var(--brand), var(--brand-2)); box-shadow: var(--shadow); font-weight:600}
+
+    /* Hero */
+    .hero{position:relative; padding:72px 0 42px}
+    .hero .grid{display:grid; grid-template-columns: 1.2fr .8fr; gap:28px; align-items:center}
+    h1{font-size: clamp(28px, 4.2vw, 48px); line-height:1.15; margin:0 0 10px}
+    .subtitle{color:var(--muted); font-size: clamp(14px, 1.5vw, 18px)}
+    .badges{display:flex; gap:10px; margin-top:14px; flex-wrap:wrap}
+    .badge{padding:6px 10px; border-radius:999px; background:rgba(124,58,237,.18); border:1px solid rgba(124,58,237,.35); color:#d9ccff; font-size:12px}
+    .badge.aqua{background:rgba(6,182,212,.18); border-color:rgba(6,182,212,.35); color:#c9fbff}
+
+    .hero-card{background:linear-gradient(180deg, rgba(22,24,29,.8), rgba(22,24,29,.6)); border:1px solid rgba(255,255,255,.08); border-radius:var(--radius); box-shadow: var(--shadow); padding:18px}
+    .metro-svg{width:100%; aspect-ratio: 4/3; background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02)); border-radius:16px; display:block}
+
+    /* Ticker */
+    .ticker-wrap{overflow:hidden; border:1px solid rgba(255,255,255,.08); border-radius:12px; background:rgba(0,0,0,.25)}
+    .ticker{display:flex; gap:40px; padding:8px 0; animation: slide 28s linear infinite}
+    .ticker span{white-space:nowrap; color:#ffe9a8}
+    .dot{display:inline-block; width:6px; height:6px; background:var(--warning); border-radius:999px; margin:0 10px}
+    @keyframes slide{from{transform:translateX(0)} to{transform:translateX(-50%)} }
+
+    /* Sections */
+    section{padding:42px 0}
+    .section-title{font-size:clamp(22px, 3.2vw, 32px); margin:0 0 16px}
+    .muted{color:var(--muted)}
+
+    /* Cards grid */
+    .grid{display:grid; gap:18px}
+    .grid.cols-3{grid-template-columns: repeat(3, 1fr)}
+    .grid.cols-2{grid-template-columns: repeat(2, 1fr)}
+    @media (max-width: 900px){
+      .hero .grid{grid-template-columns:1fr}
+      .grid.cols-3{grid-template-columns:1fr 1fr}
+    }
+    @media (max-width: 640px){
+      .grid.cols-3,.grid.cols-2{grid-template-columns:1fr}
+    }
+    .card{background:var(--card); border:1px solid rgba(255,255,255,.08); border-radius:16px; box-shadow: var(--shadow); padding:18px}
+    .chip{font-size:12px; padding:5px 9px; border-radius:999px; background:rgba(255,255,255,.06); color:var(--muted); border:1px solid rgba(255,255,255,.06)}
+
+    /* Tables */
+    table{width:100%; border-collapse:collapse; border-radius:12px; overflow:hidden}
+    th, td{padding:12px 14px; text-align:left}
+    thead{background:rgba(255,255,255,.06)}
+    tbody tr:nth-child(odd){background:rgba(255,255,255,.03)}
+    tbody tr:hover{background:rgba(124,58,237,.08)}
+
+    /* List badge */
+    .line-badge{display:inline-flex; align-items:center; gap:8px; padding:6px 10px; border-radius:999px; font-weight:600}
+    .purple{background:rgba(124,58,237,.2); border:1px solid rgba(124,58,237,.45)}
+    .aqua{background:rgba(6,182,212,.2); border:1px solid rgba(6,182,212,.45)}
+
+    /* Ticket cards */
+    .ticket{display:flex; gap:14px; align-items:flex-start}
+    .ticket .icon{font-size:22px}
+
+    /* Forms */
+    .form{display:grid; gap:12px}
+    .input{width:100%; padding:12px 14px; background:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.1); border-radius:12px; color:var(--text)}
+    .btn{display:inline-block; padding:12px 16px; border-radius:12px; border:1px solid rgba(255,255,255,.08); background:linear-gradient(135deg, var(--brand), var(--brand-2)); color:white; font-weight:600}
+
+    /* Footer */
+    footer{padding:34px 0; color:var(--muted); border-top:1px solid rgba(255,255,255,.08)}
+    .footer-grid{display:grid; grid-template-columns: 2fr 1fr 1fr; gap:18px}
+    .mini{font-size:13px}
+    @media (max-width: 820px){
+      .footer-grid{grid-template-columns:1fr}
+    }
+
+    /* Utility */
+    .pill{display:inline-block; padding:6px 10px; border-radius:999px; background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.08)}
+    .row{display:flex; gap:10px; align-items:center; flex-wrap:wrap}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="logo">
+        <div class="logo-badge">PM</div>
+        <span>Pune Metro</span>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#routes">Routes</a></li>
+          <li><a href="#timetable">Timings</a></li>
+          <li><a href="#fares">Fares</a></li>
+          <li><a href="#tickets">Tickets</a></li>
+          <li><a href="#map">Map</a></li>
+          <li><a class="cta" href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="home" class="hero">
+    <div class="container">
+      <div class="grid">
+        <div>
+          <h1>Ride fast. Ride clean. <br/>Welcome to <span style="background:linear-gradient(90deg,var(--brand),var(--brand-2)); -webkit-background-clip:text; background-clip:text; color:transparent">Pune Metro</span></h1>
+          <p class="subtitle">Find routes, train timings, fares, and station facilities — all in one simple page made with only HTML & CSS.</p>
+          <div class="badges">
+            <span class="badge">No JavaScript</span>
+            <span class="badge aqua">Responsive Design</span>
+            <span class="badge">Accessible & Clean</span>
+          </div>
+          <div style="height:16px"></div>
+          <div class="ticker-wrap">
+            <div class="ticker">
+              <span>⚠️ Weekend maintenance may affect late‑night services.<span class="dot"></span></span>
+              <span>🎫 Save with Smart Card: up to 10% off frequent rides.<span class="dot"></span></span>
+              <span>🚇 First train 6:00 AM · Last train 11:00 PM (sample).<span class="dot"></span></span>
+              <span>🧼 Trains sanitized regularly for your safety.<span class="dot"></span></span>
+              <span>🔔 Please arrive 5 minutes before departure.<span class="dot"></span></span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-card">
+          <svg class="metro-svg" viewBox="0 0 600 450" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Stylized metro illustration">
+            <defs>
+              <linearGradient id="g1" x1="0" x2="1">
+                <stop offset="0%" stop-color="#7c3aed"/>
+                <stop offset="100%" stop-color="#06b6d4"/>
+              </linearGradient>
+            </defs>
+            <rect x="0" y="0" width="600" height="450" rx="16" fill="rgba(255,255,255,.02)" stroke="rgba(255,255,255,.06)"/>
+            <g transform="translate(0, 300)">
+              <rect x="40" y="-90" width="520" height="120" rx="14" fill="#0f1116" stroke="rgba(255,255,255,.1)"/>
+              <rect x="60" y="-70" width="180" height="30" rx="6" fill="url(#g1)"/>
+              <rect x="250" y="-70" width="180" height="30" rx="6" fill="url(#g1)" opacity=".6"/>
+              <rect x="440" y="-70" width="60" height="30" rx="6" fill="#22c55e"/>
+              <circle cx="140" cy="20" r="16" fill="#222" stroke="#666"/>
+              <circle cx="460" cy="20" r="16" fill="#222" stroke="#666"/>
+              <path d="M 40 35 L 560 35" stroke="url(#g1)" stroke-width="6"/>
+            </g>
+            <text x="50" y="60" fill="#d9ccff" font-family="Inter" font-weight="700" font-size="24">Next train in 2 min</text>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <section id="routes">
+    <div class="container">
+      <h2 class="section-title">Routes & Lines</h2>
+      <p class="muted">Sample information for demo purposes.</p>
+      <div class="grid cols-2">
+        <div class="card">
+          <div class="row" style="justify-content:space-between">
+            <span class="line-badge purple">Purple Line</span>
+            <span class="chip">Approx. 17 stations</span>
+          </div>
+          <p><strong>Key stretch:</strong> PCMC ⇄ Swargate</p>
+          <p class="muted">Select stations: PCMC • Sant Tukaram Nagar • Nashik Phata • Khandoji Baba Chowk • Kasarwadi • Dapodi • Bopodi • Khadki • Range Hills • Shivajinagar • Civil Court • Budhwar Peth • Mandai • Swargate</p>
+        </div>
+        <div class="card">
+          <div class="row" style="justify-content:space-between">
+            <span class="line-badge aqua">Aqua Line</span>
+            <span class="chip">Approx. 16 stations</span>
+          </div>
+          <p><strong>Key stretch:</strong> Vanaz ⇄ Ramwadi</p>
+          <p class="muted">Select stations: Vanaz • Anand Nagar • Ideal Colony • Nal Stop • Garware College • Deccan Gymkhana • Sambhaji Udyan • PMC • Civil Court • Mangalwar Peth • Pune Station • Ruby Hall • Bund Garden • Kalyani Nagar • Ramwadi</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="timetable">
+    <div class="container">
+      <h2 class="section-title">Train Timings</h2>
+      <div class="card">
+        <table aria-label="Train timings table">
+          <thead>
+            <tr>
+              <th>Line</th>
+              <th>First Train</th>
+              <th>Last Train</th>
+              <th>Peak Frequency</th>
+              <th>Off‑Peak Frequency</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="pill">Purple</span></td>
+              <td>06:00</td>
+              <td>23:00</td>
+              <td>5–7 min</td>
+              <td>10–12 min</td>
+            </tr>
+            <tr>
+              <td><span class="pill">Aqua</span></td>
+              <td>06:05</td>
+              <td>22:55</td>
+              <td>5–7 min</td>
+              <td>10–12 min</td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="mini muted" style="margin-top:8px">*Times shown are sample placeholders for this demo site.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="fares">
+    <div class="container">
+      <h2 class="section-title">Fares</h2>
+      <div class="grid cols-2">
+        <div class="card">
+          <table aria-label="Fare table">
+            <thead>
+              <tr>
+                <th>Distance Band</th>
+                <th>Single Journey</th>
+                <th>Return</th>
+                <th>Smart Card*</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>0–2 km</td><td>₹10</td><td>₹18</td><td>₹9</td></tr>
+              <tr><td>2–5 km</td><td>₹20</td><td>₹36</td><td>₹18</td></tr>
+              <tr><td>5–10 km</td><td>₹30</td><td>₹54</td><td>₹27</td></tr>
+              <tr><td>10+ km</td><td>₹40</td><td>₹72</td><td>₹36</td></tr>
+            </tbody>
+          </table>
+          <p class="mini muted" style="margin-top:8px">*Sample 10% discount for Smart Card users (demo only).</p>
+        </div>
+        <div class="card">
+          <h3 style="margin:0 0 10px">Concessions & Tips</h3>
+          <ul style="margin:0 0 8px 16px">
+            <li>Use <strong>Smart Cards</strong> to save on regular travel.</li>
+            <li><strong>Children under 5</strong> may travel free with an adult (sample rule).</li>
+            <li>Keep your ticket handy for <strong>exit gates</strong>.</li>
+            <li>Plan interchanges at <strong>Civil Court</strong> seamlessly.</li>
+          </ul>
+          <p class="mini muted">Note: All values here are placeholders for the demo design.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="tickets">
+    <div class="container">
+      <h2 class="section-title">Tickets & Passes</h2>
+      <div class="grid cols-3">
+        <div class="card ticket">
+          <div class="icon">🎫</div>
+          <div>
+            <h3 style="margin:0 0 6px">QR Ticket</h3>
+            <p class="muted">Buy at station or approved apps; scan at entry and exit gates.</p>
+          </div>
+        </div>
+        <div class="card ticket">
+          <div class="icon">💳</div>
+          <div>
+            <h3 style="margin:0 0 6px">Smart Card</h3>
+            <p class="muted">Rechargeable; quick tap‑in/out with sample 10% savings.</p>
+          </div>
+        </div>
+        <div class="card ticket">
+          <div class="icon">🗓️</div>
+          <div>
+            <h3 style="margin:0 0 6px">Tourist/Day Pass</h3>
+            <p class="muted">Unlimited rides for a day; ideal for city visitors (demo).</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="map">
+    <div class="container">
+      <h2 class="section-title">Network Map (Stylized)</h2>
+      <div class="card">
+        <svg viewBox="0 0 900 480" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Pune Metro stylized network map">
+          <defs>
+            <marker id="dot" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5">
+              <circle cx="5" cy="5" r="3" fill="#fff" />
+            </marker>
+          </defs>
+          <!-- Background -->
+          <rect x="0" y="0" width="900" height="480" rx="14" fill="rgba(255,255,255,.02)" stroke="rgba(255,255,255,.08)"/>
+          <!-- Purple Line -->
+          <path d="M120,380 C260,360 420,300 760,120" fill="none" stroke="#7c3aed" stroke-width="10" stroke-linecap="round"/>
+          <!-- Aqua Line -->
+          <path d="M120,120 C300,180 560,240 760,360" fill="none" stroke="#06b6d4" stroke-width="10" stroke-linecap="round"/>
+          <!-- Interchange -->
+          <circle cx="460" cy="250" r="12" fill="#0d0e12" stroke="#fff" stroke-width="3"/>
+          <text x="480" y="246" fill="#cbd5e1" font-family="Inter" font-size="14">Civil Court (Interchange)</text>
+          <!-- Stations (sample) -->
+          <g fill="#fff">
+            <circle cx="150" cy="365" r="5"/>
+            <text x="160" y="368" fill="#cbd5e1" font-size="12">PCMC</text>
+            <circle cx="250" cy="345" r="5"/>
+            <text x="260" y="348" fill="#cbd5e1" font-size="12">Kasarwadi</text>
+            <circle cx="350" cy="315" r="5"/>
+            <text x="360" y="318" fill="#cbd5e1" font-size="12">Khadki</text>
+            <circle cx="460" cy="250" r="5"/>
+            <circle cx="580" cy="200" r="5"/>
+            <text x="590" y="203" fill="#cbd5e1" font-size="12">Budhwar Peth</text>
+            <circle cx="740" cy="130" r="5"/>
+            <text x="750" y="133" fill="#cbd5e1" font-size="12">Swargate</text>
+
+            <circle cx="150" cy="135" r="5"/>
+            <text x="160" y="138" fill="#cbd5e1" font-size="12">Vanaz</text>
+            <circle cx="300" cy="180" r="5"/>
+            <text x="310" y="183" fill="#cbd5e1" font-size="12">Nal Stop</text>
+            <circle cx="420" cy="220" r="5"/>
+            <text x="430" y="223" fill="#cbd5e1" font-size="12">Deccan</text>
+            <circle cx="460" cy="250" r="5"/>
+            <circle cx="600" cy="310" r="5"/>
+            <text x="610" y="313" fill="#cbd5e1" font-size="12">Pune Station</text>
+            <circle cx="760" cy="360" r="5"/>
+            <text x="770" y="363" fill="#cbd5e1" font-size="12">Ramwadi</text>
+          </g>
+        </svg>
+        <p class="mini muted" style="margin-top:8px">This is a simplified, stylized map for the demo design.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <h2 class="section-title">Contact & Help</h2>
+      <div class="grid cols-2">
+        <div class="card">
+          <h3 style="margin:0 0 8px">Customer Support</h3>
+          <p class="muted">For queries related to tickets, lost & found, and station facilities.</p>
+          <div class="row" style="margin:8px 0">
+            <span class="pill">📞 1800‑000‑000 (sample)</span>
+            <span class="pill">✉️ support@punemetro.demo</span>
+          </div>
+          <p class="mini muted">Service hours: 6:00–23:00 (daily)</p>
+        </div>
+        <div class="card">
+          <form class="form" aria-label="Contact form (demo)">
+            <input class="input" type="text" placeholder="Your name" required>
+            <input class="input" type="email" placeholder="Email address" required>
+            <textarea class="input" rows="4" placeholder="Your message"></textarea>
+            <button class="btn" type="button" aria-disabled="true">Send (Demo)</button>
+            <p class="mini muted">This is a static demo; the button is non‑functional.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <strong>Pune Metro</strong>
+        <p class="mini">A sample, single‑page website built using only HTML & CSS. You can drop this file on any static host.</p>
+      </div>
+      <div>
+        <p class="mini">Quick Links</p>
+        <p class="mini"><a href="#routes">Routes</a> · <a href="#timetable">Timings</a> · <a href="#fares">Fares</a></p>
+      </div>
+      <div>
+        <p class="mini">Legal</p>
+        <p class="mini">© <span id="y">2025</span> Demo Only</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
