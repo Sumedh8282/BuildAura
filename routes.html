@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+            crossorigin="anonymous">
+        <style>  
+
+    body {
+      background-color: white;
+    }
+    .metro-header {
+      background: linear-gradient(90deg, purple, aqua,rgb(224, 59, 183));
+      color: black;
+      padding: 20px;
+      text-align: center;
+    }
+       .route-card1 {
+      border-radius: 12px;
+      box-shadow: 0 4px 10px purple;
+      
+      color: purple;
+      transition: transform 0.2s ease-in-out;
+    }
+        .route-card2 {
+      border-radius: 12px;
+      box-shadow: 0 4px 10px aqua;
+      transition: transform 0.2s ease-in-out;
+    }
+        .route-card3 {
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgb(224, 59, 183) ;
+      transition: transform 0.2s ease-in-out;
+    }
+    .route-card1:hover {
+      transform: scale(1.03);
+    }
+     .route-card2:hover {
+      transform: scale(1.03);
+    }
+     .route-card3:hover {
+      transform: scale(1.03);
+    }
+
+    .text-route1{
+        color: purple;
+       
+    }
+    .text-route2{
+        color: aqua;
+        
+    }
+    .text-route3{
+        color: rgb(224, 59, 183);
+       
+    }
+    .list-group-flush1{
+        background-color: purple; 
+        text-decoration-color: purple;  
+    }
+     .list-group-flush2{
+        background-color: aqua;  
+
+    }
+     .list-group-flush3{
+        background-color:  rgb(224, 59, 183);   
+    }
+    .img{
+       display: block;
+       margin-left: auto;
+       margin-right: auto;
+       width: 50%;    
+    }
+  
+  
+  </style>
+    </head>
+    <body>
+
+        <!-- Header 
+        <div class="metro-header">
+            <h1>Pune Metro Routes</h1>
+            <p>Explore the metro routes and stations</p>
+        </div> -->
+
+        <div class="container mt-4">
+            <div class="row g-4"> 
+
+                <!-- Route 1 -->
+                <div class="col-md-4">
+
+                    <div class="card route-card1 p-3">
+                         <h4 class="text-route1"> Purple Line (PCMC –
+                                Swargate)</h4>
+                            <ul class="list-group list-group-flush1">
+                                <li class="list-group-item">PCMC</li>
+                                <li class="list-group-item">Sant Tukaram
+                                    Nagar</li>
+                                <li class="list-group-item">Nashik
+                                    Phata</li>
+                                <li class="list-group-item">Kasarwadi</li>
+                                <li class="list-group-item">Phugewadi</li>
+                                <li class="list-group-item">Dapodi</li>
+                                <li class="list-group-item">Bopodi</li>
+                                <li class="list-group-item">Khadki</li>
+                                <li class="list-group-item">Range Hills</li>
+                                <li class="list-group-item">Chh. Shivaji
+                                    Nagar</li>
+                                <li class="list-group-item">Civil Court (Major
+                                    Interchange With Lines)</li>
+                                <li class="list-group-item">Budhwar Peth</li>
+                                <li class="list-group-item">Kasba Peth</li>
+                                <li class="list-group-item">Mandai</li>
+                                <li class="list-group-item">Swargate</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Route 2 -->
+                    <div class="col-md-4">
+                        <div class="card route-card2 p-3">
+                            <h4 class="text-route2"> Aqua Line (Vanaz –
+                                Ramwadi)</h4>
+                            <ul class="list-group list-group-flush2">
+                                <li class="list-group-item">Vanaz</li>
+                                <li class="list-group-item">Anand Nagar</li>
+                                <li class="list-group-item">Ideal
+                                    Colony</li>
+                                <li class="list-group-item">Garware
+                                    College</li>
+                                <li class="list-group-item">Deccan Gymkhana</li>
+                                <li class="list-group-item">Chh. Sambhaji
+                                    Udyan</li>
+                                <li class="list-group-item">PMC</li>
+                                <li class="list-group-item">Civil Court (Major
+                                    Interchange With Lines)</li>
+                                <li class="list-group-item">Mangalwar Peth</li>
+                                <li class="list-group-item">Pune Railway
+                                    Station</li>
+                                <li class="list-group-item">Ruby Hall
+                                    Clinic</li>
+                                <li class="list-group-item">Bund Garden</li>
+                                <li class="list-group-item">Yerwada</li>
+                                <li class="list-group-item">Kalyani Nagar</li>
+                                <li class="list-group-item">Ramwadi</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Route 3 -->
+                    <div class="col-md-4">
+                        <div class="card route-card3 p-3">
+                            <h4 class="text-route3">Pink Line (Hinjewadi to
+                                Civil
+                                Court)</h4>
+                            <ul class="list-group list-group-flush3">
+                                <li class="list-group-item">Hinjawadi</li>
+                                <li class="list-group-item">Wakad Chowk</li>
+                                <li class="list-group-item">Balewadi
+                                    Stadium</li>
+                                <li class="list-group-item">NICMAR</li>
+                                <li class="list-group-item">Ramnagar</li>
+                                <li class="list-group-item">Laxmi Naga</li>
+                                <li class="list-group-item">Balewadi Phata</li>
+                                <li class="list-group-item">Baner Gaon</li>
+                                <li class="list-group-item">Indian Agricultural
+                                    Research Institute</li>
+                                <li class="list-group-item">Sakal Nagar</li>
+                                <li class="list-group-item">Savitribai Phule
+                                    Pune
+                                    University</li>
+                                <li class="list-group-item">Reserve Bank of
+                                    India</li>
+                                <li class="list-group-item">Agricultural
+                                    College</li>
+                                <li class="list-group-item">Shivajinagar</li>
+                                <li class="list-group-item">Civil Court (Major
+                                    Interchange With Lines)</li>
+
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <img class="img" src="images/pune_route_map.jpg">
+
+        <!-- Footer -->
+        <footer class="text-center mt-5 p-3 bg-light">
+            <p> Designed By BUILDAURA Team </p>
+        </footer>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+            crossorigin="anonymous"></script>
+
+    </body>
+</html>
