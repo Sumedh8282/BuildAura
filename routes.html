@@ -76,11 +76,117 @@
        margin-right: auto;
        width: 50%;    
     }
+
+    /* Header css start */
+    .img1{
+      width: 100px;
+      height: 100px;
+      float: left;
+
+    }
+    .unlist {
+      padding: 0;
+      width: 100%;
+      margin: 0 0 0 250px;
+      list-style: none;
+    }
+
+    .navbar {
+      width: 100%;
+      overflow: auto;
+      background-color: #003366;
+
+
+    }
+
+    li {
+      width: 100px;
+      display: block;
+      padding: 20px 15px;
+      text-decoration: none;
+      font-family: arial;
+      color: white;
+      text-align: center;
+      float: left;
+    }
+
+    a:hover {
+      background-color: gray;
+      text-transform: uppercase;
+
+    }
+
+    a {
+      width: 100px;
+      display: block;
+      padding: 8px 15px;
+      text-decoration: none;
+      font-family: arial;
+      color: white;
+      text-align: center;
+
+    }
+
+    
+    .bar {
+      float: right;
+      border-radius: 100px;
+      padding: 3px;
+      margin-top: 20px;
+      margin-right: 200px;
+      margin-bottom: 10px;
+      box-shadow: none;
+
+    }
+
+    input {
+      border-radius: 100px;
+      text-align: center;
+    }
+
+    button {
+      border-radius: 100px;
+    }
+
+
+
+    /* Header css end */
   
   
   </style>
     </head>
     <body>
+          <header>
+
+    <div class="navbar">
+      <ul class="unlist">
+        <div class="logo">
+          <img src="/images/logo.png" class="img1">
+        </div>
+        <li class="active">
+          <a href="#">Home</a>
+        </li>
+        <li >
+          <a href="#">Routes</a>
+        </li>
+        <li >
+          <a href="#">Ticket</a>
+        </li>
+        <li >
+          <a href="#">Contact</a>
+        </li>
+        <li>
+          <a href="#">About</a>
+        </li>
+        <div class="bar">
+          <input type="text" placeholder="Search Here" />
+          <button>Search</button>
+        </div>
+      </ul>
+    </div>
+
+
+  </header>
 
         <!-- Header 
         <div class="metro-header">
