@@ -18,6 +18,7 @@
     body {
       margin: 0;
       padding: 0;
+      background-color: #f9f9f9;
 
     }
 
@@ -32,7 +33,7 @@
     .navbar {
       width: 100%;
       overflow: auto;
-      background-color: #5EB1BF;
+      background-color: #3338A0;
 
 
     }
@@ -49,7 +50,7 @@
     }
 
     a:hover {
-      background-color: gray;
+      color: #FCC61D;
       text-transform: uppercase;
 
     }
@@ -90,13 +91,13 @@
     .info {
       padding: 60px 20px;
       text-align: center;
-
+      background-color: #f9f9f9;
     }
 
     .section-title {
       font-size: 2rem;
       margin-bottom: 30px;
-      color: #0077b6;
+      color: #3338A0;
     }
 
     .cards {
@@ -117,23 +118,326 @@
 
     .card:hover {
       transform: translateY(-8px);
-      border-color: rgb(224, 59, 183);
+      border-color: red;
+      background-color:cornflowerblue;
     }
 
     .card h3 {
       margin-bottom: 10px;
-      color: #0077b6;
+      color: #3338A0;
     }
+
+    /* Train animation start */
+    body {
+      background-color: #f9f9f9;
+      overflow-x: hidden;
+    }
+
+    #Text {
+      margin: 0 auto;
+      font-family: Tahoma, Geneva, sans-serif;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    #Text span {
+      display: block;
+    }
+
+    #Text span:nth-child(1) {
+      font-size: 4em;
+      color: #F0F0EE;
+      text-shadow: 0px 5px 0px #959691, 0px 7px 0px #959691, 0px 15px 0px #858383;
+      line-height: 0.85;
+    }
+
+    #Text span:nth-child(2) {
+      font-family: Pacifico;
+      color: red;
+      text-shadow: 0px 2px 0px white;
+      font-size: 20px;
+      margin-left: 150px;
+      margin-top: -10px;
+      transform: rotate(-15deg);
+    }
+
+    #metro1 {
+      background-image: url('https://wpclipart.com/buildings/city/skyline/cityscape_T.png');
+      background-position: top;
+      height: 100px;
+    }
+
+    #metro {
+      margin-top: -100px;
+      width: 100%;
+      height: 60px;
+      background-color: transparent;
+      transform: translateX(0px);
+      animation-name: movetrain;
+      animation-duration: 8s;
+      animation-iteration-count: infinite;
+    }
+
+    #metro span {
+      display: inline-block;
+    }
+
+    .door,
+    .door2 {
+      width: 30px;
+      height: 43px;
+      background-color: #CF1D01;
+      position: absolute;
+      margin-top: 18px;
+      margin-left: 10px;
+      box-shadow: inset 0 -5px 0 #961703;
+      border: 1px solid black;
+    }
+
+    .door2 {
+      width: 25px;
+      margin-top: -18px;
+      margin-left: 215px;
+    }
+
+    .door::before,
+    .door2::before {
+      content: "";
+      width: 20px;
+      height: 19px;
+      background-color: #008ACB;
+      box-shadow: inset 0 0 10px #004FC8, inset 0 2px 0 blue;
+      position: absolute;
+      margin-top: 4px;
+      margin-left: 2px;
+      border: 3px solid #961703;
+    }
+
+    .door2::before {
+      width: 17px;
+      margin-left: 1px;
+    }
+
+    .mirror,
+    .mirror1 {
+      width: 154px;
+      height: 15px;
+      background-color: #666665;
+      margin-top: 18px;
+      margin-left: 50px;
+      border: 1px solid black;
+    }
+
+    .mirror1 {
+      width: 140px;
+      border-radius: 0 100% 0 0;
+    }
+
+    .mirror span,
+    .mirror1 span {
+      display: inline-block;
+    }
+
+    .m1,
+    .m2,
+    .m3,
+    .m4,
+    .m22 {
+      display: inline-block;
+      width: 35px;
+      height: 11px;
+      background-color: #008ACB;
+      position: absolute;
+      margin-top: 1px;
+      margin-left: 1px;
+      box-shadow: inset 0 0 8px #004FC8;
+      border: 1px solid blue;
+    }
+
+    .m22 {
+      width: 70px;
+      border-radius: 0 100% 0 0;
+      margin-left: 42px;
+    }
+
+    .m2 {
+      margin-left: 40px;
+    }
+
+    .m3 {
+      margin-left: 79px;
+    }
+
+    .m4 {
+      margin-left: 117px;
+    }
+
+    .back {
+      background-color: #E3E1E1;
+      width: 250px;
+      height: 60px;
+      border-radius: 0 0 10px 10px;
+      box-shadow: 0 8px 6px -6px yellow, inset 0 9px 0 #666665, inset 0 15px 0 black;
+    }
+
+    .back::after {
+      content: "";
+      background-color: black;
+      width: 6px;
+      height: 10px;
+      position: absolute;
+      margin-left: 249px;
+      margin-top: 1px;
+      border-radius: 10px;
+    }
+
+    .back::before {
+      content: "";
+      width: 250px;
+      height: 20px;
+      background-color: #CF1D01;
+      border-top: 1px solid #CF1D01;
+      box-shadow: inset 0px 4px 0px #E3E1E1, 0 4px 0px black, inset 0 -5px 0px #961703;
+      position: absolute;
+      margin-top: 40px;
+      border-radius: 0px 0px 10px 10px;
+    }
+
+    .engine {
+      background-color: #E3E1E1;
+      width: 300px;
+      height: 60px;
+      border-radius: 0px 100% 10px 10px;
+      box-shadow: 0 8px 6px -6px yellow, inset 0 9px 0 #666665, inset 0 15px 0 black;
+    }
+
+    .engine::before {
+      content: "";
+      width: 280px;
+      height: 20px;
+      background-color: #CF1D01;
+      border-top: 1px solid #CF1D01;
+      box-shadow: inset 0px 4px 0px #E3E1E1, 0 4px 0px black, inset 0 -5px 0px #961703;
+      position: absolute;
+      margin-top: 40px;
+      border-radius: 0 100% 10px 10px;
+    }
+
+    .track {
+      background-color: #07b4cb;
+      width: 100%;
+      height: 10px;
+      border-top: 3px solid black;
+      position: relative;
+      margin-top: 5px;
+    }
+
+    .engine::after {
+      content: "";
+      background-color: yellow;
+      width: 4px;
+      height: 4px;
+      position: absolute;
+      margin-left: 30px;
+      margin-top: -63px;
+      border-radius: 50%;
+      box-shadow: 0 0 10px yellow;
+      animation-name: spark1;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+    }
+
+    #electric {
+      width: 100%;
+      height: 30px;
+      border-top: 1px solid black;
+    }
+
+    .spark1 {
+      width: 1px;
+      height: 30px;
+      background-color: black;
+      position: absolute;
+      margin-top: -32px;
+      margin-left: 52px;
+      transform: rotate(-70deg);
+    }
+
+    .spark {
+      width: 1px;
+      height: 37px;
+      background-color: black;
+      display: inline-block;
+      position: absolute;
+      margin-top: -25px;
+      margin-left: 50px;
+      transform: rotate(70deg);
+    }
+
+    @keyframes movetrain {
+      from {
+        transform: translateX(-100%);
+      }
+
+      to {
+        transform: translateX(100%);
+      }
+
+      80% {
+        transform: translateX(300px);
+      }
+
+      81% {
+        transform: translateX(310px);
+      }
+
+      82% {
+        transform: translateX(311px);
+      }
+
+      83% {
+        transform: translateX(312px);
+      }
+
+      84% {
+        transform: translateX(313px);
+      }
+
+      85% {
+        transform: translateX(314px);
+      }
+
+      89% {
+        transform: translateX(320px);
+      }
+
+      90% {
+        transform: translateX(400px);
+      }
+    }
+
+    @keyframes spark1 {
+      100% {
+        background-color: red;
+      }
+
+      10% {
+        background-color: yellow;
+      }
+    }
+
+    /* Train animation end */
 
     /* Contact Form */
     .contact {
       padding: 60px 20px;
       text-align: center;
+      background: #f9f9f9;
     }
 
     .contact h2 {
       margin-bottom: 20px;
-      color: #0077b6;
+      color: #3338A0;
     }
 
     .contact form {
@@ -153,7 +457,7 @@
     }
 
     .contact button {
-      background: #0077b6;
+      background: #3338A0;
       color: white;
       padding: 12px;
       border: none;
@@ -169,12 +473,13 @@
 
     /* Footer */
     footer {
-      background: #0077b6;
+      background: #3338A0;
       color: white;
       text-align: center;
       padding: 15px;
       margin-top: 20px;
     }
+
 
     /* Responsive */
     @media (max-width: 768px) {
@@ -200,18 +505,18 @@
 </head>
 
 <body>
-  <header style="position: sticky;">
+  <header class="sticky-top">
 
-    <div class="navbar">
+    <div class="navbar ">
       <ul>
         <div class="logo">
           <img src="/images/logo.png" class="img">
         </div>
         <li class="active">
-          <a href="#">Home</a>
+          <a href="/index.html">Home</a>
         </li>
         <li>
-          <a href="#">Routes</a>
+          <a href="/routes.html">Routes</a>
         </li>
         <li>
           <a href="#">Ticket</a>
@@ -225,22 +530,28 @@
         <div class="bar">
           <input type="text" placeholder="Search Here" />
           <button>Search</button>
+
         </div>
       </ul>
     </div>
 
-    <marquee style="background-color: dimgray; padding-bottom: 10px;">
-    <span style="margin-right:50px;">Welcome to Pune Metro ! </span>
-    <span style="margin-right:50px;">Customer Care: customercare.pmrp@mahametro.org, 18002705501</span>
-    <span style="margin-right:50px;">|Click Here for Tenders !|</span>
-    <span style="margin-right:50px;">Click Here for Current Vacancies in Pune Metro!</span> 
-    <span style="margin-right:50px;">Get a 10% discount on all Metro rides </span>
-    </marquee>
+
 
 
   </header>
 
+
+
   <main>
+    <section>
+      <marquee style="background-color:#3C3C44; padding-bottom: 10px; color: #CCCCCC;">
+        <span style="margin-right:50px;">Welcome to Pune Metro ! </span>
+        <span style="margin-right:50px;">Customer Care: customercare.pmrp@mahametro.org, 18002705501</span>
+        <span style="margin-right:50px;">|Click Here for Tenders !|</span>
+        <span style="margin-right:50px;">Click Here for Current Vacancies in Pune Metro!</span>
+        <span style="margin-right:50px;">Get a 10% discount on all Metro rides </span>
+      </marquee>
+    </section>
     <!-- Slider Start -->
     <section>
       <div class="container-fluid">
@@ -323,8 +634,51 @@
         </div>
       </section>
 
+
+      <section>
+        <div id="electric">
+        </div>
+        <div id="metro1">
+        </div>
+        <div id="metro">
+          <span class="back">
+            <div class="door"></div>
+            <div class="mirror">
+              <span class="m1"></span>
+              <span class="m2"></span>
+              <span class="m3"></span>
+              <span class="m4"></span>
+            </div>
+            <div class="door2"></div>
+          </span>
+          <span class="back">
+            <div class="door"></div>
+            <div class="mirror">
+              <span class="m1"></span>
+              <span class="m2"></span>
+              <span class="m3"></span>
+              <span class="m4"></span>
+            </div>
+            <div class="door2"></div>
+          </span>
+          <span class="engine">
+            <div class="spark">
+            </div>
+            <div class="spark1"></div>
+            <div class="door"></div>
+            <div class="mirror1">
+              <span class="m1"></span>
+              <span class="m22"></span>
+            </div>
+          </span>
+        </div>
+        <div class="track">
+        </div>
+      </section>
+
       <!-- Contact Form -->
       <section class="contact">
+        <div class="container" style="border: 1px solid black;">
         <h2>Contact Us</h2>
         <form>
           <input type="text" placeholder="Your Name" required>
@@ -332,12 +686,17 @@
           <textarea placeholder="Your Message" rows="4" required></textarea>
           <button type="submit">Send Message</button>
         </form>
+        </div>
       </section>
+
+
   </main>
 
   <!-- Footer -->
   <footer>
-    <p>© 2025 Pune Metro | Designed by Student Project</p>
+    <p>| © 2025 Pune Metro |
+    <h5 style="color:darkorange;">Designed By BuildAura Team</h5>
+    </p>
   </footer>
 
 </body>
