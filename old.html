@@ -9,71 +9,77 @@
     integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
 
   <style>
-    .img {
-      width: 100px;
-      height: 100px;
-      float: left;
-    }
+   /* Header Wrapper */
+.header {
+  width: 100%;
+  background: #3C3C44;   /* Dark grey/navy */
+}
 
-    body {
-      margin: 0;
-      padding: 0;
-      background-color: #f9f9f9;
-    }
+/* Navbar container */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
 
-    ul {
-      padding: 0;
-      margin: 0 0 0 250px;
-      list-style: none;
-    }
+/* Logo */
+.logo-img {
+  height: 0px;
+  width: 80px;
+}
 
-    .navbar {
-      width: 100%;
-      overflow: auto;
-      background-color: #3338A0;
-    }
+/* Navigation Links */
+.navbar-links {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
 
-    li {
-      width: 100px;
-      display: block;
-      padding: 20px 15px;
-      font-family: arial;
-      color: white;
-      text-align: center;
-      float: left;
-    }
+.nav-item {
+  margin: 0 15px;
+}
 
-    a {
-      display: block;
-      padding: 8px 15px;
-      text-decoration: none;
-      font-family: arial;
-      color: white;
-      text-align: center;
-    }
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
 
-    a:hover {
-      color: #FCC61D;
-      text-transform: uppercase;
-    }
+.nav-link:hover {
+  color: #00ffcc; /* Neon hover */
+}
 
-    .bar {
-      float: right;
-      border-radius: 100px;
-      padding: 3px;
-      margin-top: 20px;
-      margin-right: 200px;
-      margin-bottom: 10px;
-    }
+/* Search Bar */
+.navbar-search {
+  display: flex;
+  align-items: center;
+}
 
-    input {
-      border-radius: 100px;
-      text-align: center;
-    }
+.search-input {
+  padding: 6px 10px;
+  border: none;
+  border-radius: 4px 0 0 4px;
+  outline: none;
+}
 
-    button {
-      border-radius: 100px;
-    }
+.search-btn {
+  padding: 6px 12px;
+  border: none;
+  background: #00ffcc;
+  color: #000;
+  font-weight: bold;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.search-btn:hover {
+  background: #00ccaa;
+}
+
 
     /* Info Section */
     .info {
@@ -191,34 +197,44 @@
 <body>
 
   <!-- Navbar -->
-  <header class="sticky-top">
-    <div class="navbar">
-      <div class="logo">
-        <img src="/images/logo.png" class="img" alt="Metro Logo">
-      </div>
-      <ul>
-        <li><a href="/index.html">Home</a></li>
-        <li><a href="/routes.html">Routes</a></li>
-        <li><a href="#">Ticket</a></li>
-        <li><a href="#">Contact</a></li>
-        <li><a href="#">About</a></li>
-        <div class="bar">
-          <input type="text" placeholder="Search Here" />
-          <button>Search</button>
-        </div>
-      </ul>
+  <header class="header sticky-top">
+  <div class="navbar">
+    <!-- Logo -->
+    <div class="navbar-logo">
+      <img src="/images/logo.png" class="logo-img" alt="Metro Logo">
     </div>
-  </header>
+
+    <!-- Navigation -->
+    <ul class="navbar-links">
+      <li class="nav-item"><a href="/index.html" class="nav-link">Home</a></li>
+      <li class="nav-item"><a href="/routes.html" class="nav-link">Routes</a></li>
+      <li class="nav-item"><a href="#" class="nav-link">Ticket</a></li>
+      <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+      <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+    </ul>
+
+    <!-- Search -->
+    <div class="navbar-search">
+      <input type="text" class="search-input" placeholder="Search Here" />
+      <button class="search-btn">Search</button>
+    </div>
+  </div>
+</header>
+  <!-- End Navbar -->
 
   <!-- Marquee -->
   <section>
-    <marquee style="background-color:#3C3C44; padding: 10px; color: #CCCCCC;">
-      <span style="margin-right:50px;">Welcome to Pune Metro ! </span>
-      <span style="margin-right:50px;">Customer Care: customercare.pmrp@mahametro.org, 18002705501</span>
-      <span style="margin-right:50px;">|Click Here for Tenders !|</span>
-      <span style="margin-right:50px;">Click Here for Current Vacancies in Pune Metro!</span>
-      <span style="margin-right:50px;">Get a 10% discount on all Metro rides </span>
-    </marquee>
+    <marquee style="background-color:#3C3C44; padding: 10px; color: #CCCCCC; white-space:nowrap; overflow:hidden;">
+  <span style="margin-right:50px;">Welcome to Pune Metro !</span>
+  <span style="margin-right:50px;">Customer Care: customercare.pmrp@mahametro.org, 18002705501</span>
+  <span style="margin-right:50px;">
+    <a href="tenders.html" style="color:yellow; text-decoration:none;">Click Here for Tenders !</a>
+  </span>
+  <span style="margin-right:50px;">
+    <a href="vacancies.html" style="color:#00ffcc; text-decoration:none;">Click Here for Current Vacancies in Pune Metro!</a>
+  </span>
+  <span style="margin-right:50px;">Get a 10% discount on all Metro rides</span>
+</marquee>
   </section>
 
   <!-- Slider -->
