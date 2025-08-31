@@ -4,178 +4,271 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pune Metro Website</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="style.css"> <!-- keep styles in separate CSS file -->
+  <title>Pune Metro</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+
   <style>
-  /* General Reset */
-body {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
-  background-color: #E9E9E9;
-  color: #333;
-}
+    .img {
+      width: 100px;
+      height: 100px;
+      float: left;
+    }
 
-/* Navbar */
-.navbar {
-  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
-}
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+    }
 
-.navbar .nav-link {
-  color: white !important;
-  font-weight: 500;
-  transition: 0.3s;
-}
+    ul {
+      padding: 0;
+      margin: 0 0 0 250px;
+      list-style: none;
+    }
 
-.navbar .nav-link:hover {
-  color: #FCC61D !important;
-  text-transform: uppercase;
-}
+    .navbar {
+      width: 100%;
+      overflow: auto;
+      background-color: #3338A0;
+    }
 
-/* Marquee Section */
-section marquee {
-  font-size: 0.95rem;
-  font-weight: 500;
-  color: #ddd;
-}
+    li {
+      width: 100px;
+      display: block;
+      padding: 20px 15px;
+      font-family: arial;
+      color: white;
+      text-align: center;
+      float: left;
+    }
 
-/* Info Section */
-.info {
-  padding: 60px 20px;
-  text-align: center;
-}
+    a {
+      display: block;
+      padding: 8px 15px;
+      text-decoration: none;
+      font-family: arial;
+      color: white;
+      text-align: center;
+    }
 
-.section-title {
-  font-size: 2rem;
-  margin-bottom: 30px;
-  color: #3338A0;
-  font-weight: bold;
-}
+    a:hover {
+      color: #FCC61D;
+      text-transform: uppercase;
+    }
 
-.cards {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
+    .bar {
+      float: right;
+      border-radius: 100px;
+      padding: 3px;
+      margin-top: 20px;
+      margin-right: 200px;
+      margin-bottom: 10px;
+    }
 
-.card {
-  background: white;
-  padding: 20px;
-  width: 280px;
-  border-radius: 10px;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s, background-color 0.3s, color 0.3s;
-}
+    input {
+      border-radius: 100px;
+      text-align: center;
+    }
 
-.card:hover {
-  transform: translateY(-8px);
-  background-color: #c868a8;
-  color: white;
-}
+    button {
+      border-radius: 100px;
+    }
 
-/* Contact Form */
-.contact {
-  padding: 60px 20px;
-  text-align: center;
-  background: #f9f9f9;
-}
+    /* Info Section */
+    .info {
+      padding: 60px 20px;
+      text-align: center;
+      background-color: #f9f9f9;
+    }
 
-.contact h2 {
-  margin-bottom: 20px;
-  color: #3338A0;
-  font-weight: bold;
-}
+    .section-title {
+      font-size: 2rem;
+      margin-bottom: 30px;
+      color: #3338A0;
+    }
 
-.contact form {
-  max-width: 500px;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
+    .cards {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
 
-.contact input,
-.contact textarea {
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 1rem;
-}
+    .card {
+      background: white;
+      padding: 20px;
+      width: 280px;
+      border-radius: 10px;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s;
+    }
 
-.contact button {
-  background: #3338A0;
-  color: white;
-  padding: 12px;
-  border: none;
-  border-radius: 6px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: 0.3s;
-}
+    .card:hover {
+      transform: translateY(-8px);
+      background-color: cornflowerblue;
+      color: white;
+    }
 
-.contact button:hover {
-  background: #005f87;
-}
+    .card h3 {
+      margin-bottom: 10px;
+      color: #3338A0;
+    }
 
-/* Footer */
-footer {
-  background: #3338A0;
-  color: white;
-  text-align: center;
-  padding: 15px;
-  margin-top: 20px;
-  font-size: 0.9rem;
-}
+    /* Contact Form */
+    .contact {
+      padding: 60px 20px;
+      text-align: center;
+      background: #f9f9f9;
+    }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .cards {
-    flex-direction: column;
-    align-items: center;
-  }
-}
-</style>
+    .contact h2 {
+      margin-bottom: 20px;
+      color: #3338A0;
+    }
 
+    .contact form {
+      max-width: 500px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .contact input,
+    .contact textarea {
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+
+    .contact button {
+      background: #3338A0;
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .contact button:hover {
+      background: #005f87;
+    }
+
+    /* Footer */
+    footer {
+      background: #3338A0;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 20px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .cards {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .navbar ul {
+        margin: 0;
+        text-align: center;
+      }
+
+      .bar {
+        float: none;
+        margin: 10px auto;
+        text-align: center;
+      }
+    }
+  </style>
 </head>
 
 <body>
-  <!-- Header/Navbar -->
+
+  <!-- Navbar -->
   <header class="sticky-top">
-    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color:#3338A0;">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-          <img src="./images/logo.png" alt="Pune Metro Logo" width="60" height="60">
-        </a>
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item"><a class="nav-link active" href="/index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="/routes.html">Routes</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Ticket</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">About</a></li>
-        </ul>
-        <form class="d-flex">
-          <input class="form-control me-2" type="search" placeholder="Search Here">
-          <button class="btn btn-warning" type="submit">Search</button>
-        </form>
+    <div class="navbar">
+      <div class="logo">
+        <img src="/images/logo.png" class="img" alt="Metro Logo">
       </div>
-    </nav>
+      <ul>
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/routes.html">Routes</a></li>
+        <li><a href="#">Ticket</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">About</a></li>
+        <div class="bar">
+          <input type="text" placeholder="Search Here" />
+          <button>Search</button>
+        </div>
+      </ul>
+    </div>
   </header>
 
-  <!-- Marquee / Announcements -->
-  <section class="bg-dark text-light p-2">
-    <marquee>
-      Welcome to Pune Metro! | Customer Care: customercare.pmrp@mahametro.org, 18002705501 | Tenders Open | Current Vacancies | 10% Discount on Rides
+  <!-- Marquee -->
+  <section>
+    <marquee style="background-color:#3C3C44; padding: 10px; color: #CCCCCC;">
+      <span style="margin-right:50px;">Welcome to Pune Metro ! </span>
+      <span style="margin-right:50px;">Customer Care: customercare.pmrp@mahametro.org, 18002705501</span>
+      <span style="margin-right:50px;">|Click Here for Tenders !|</span>
+      <span style="margin-right:50px;">Click Here for Current Vacancies in Pune Metro!</span>
+      <span style="margin-right:50px;">Get a 10% discount on all Metro rides </span>
     </marquee>
   </section>
 
-  <!-- Carousel Section -->
-  <section class="mt-4">
-    <!-- Your Bootstrap carousel code here -->
+  <!-- Slider -->
+  <section>
+    <div class="container mt-5">
+      <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+            aria-current="true"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"></button>
+        </div>
+
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="2000">
+            <img src="/images/slider1.jpg" class="d-block w-100" alt="Slide 1">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Fast Travel</h5>
+              <p>Reach your destination in minutes.</p>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <img src="/images/slider2.jpg" class="d-block w-100" alt="Slide 2">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Eco Friendly</h5>
+              <p>Cleaner and greener public transport.</p>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <img src="/images/slider3.jpg" class="d-block w-100" alt="Slide 3">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Safe & Reliable</h5>
+              <p>Modern trains with world-class facilities.</p>
+            </div>
+          </div>
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+    </div>
   </section>
 
-  <!-- Info Section -->
+  <!-- Info Cards -->
   <section class="info">
     <h2 class="section-title">Why Choose Pune Metro?</h2>
     <div class="cards">
@@ -196,27 +289,24 @@ footer {
 
   <!-- Contact Form -->
   <section class="contact">
-    <h2>Contact Us</h2>
-    <form>
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <textarea placeholder="Your Message" rows="4" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
+    <div class="container" style="border: 1px solid black; padding: 20px; border-radius: 8px;">
+      <h2>Contact Us</h2>
+      <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message" rows="4" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
   </section>
 
   <!-- Footer -->
   <footer>
-    <p>© 2025 Pune Metro | Designed by Student Project</p>
+    <p>© 2025 Pune Metro</p>
+    <h5 style="color:darkorange;">Designed By BuildAura Team</h5>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
 </body>
-
 </html>
-
-
-
-
-
-
