@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pune Metro - Book Tickets</title>
+        <!-- Bootstrap CSS -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+            rel="stylesheet">
+        <style>
+    body {
+      background-color: #f9f9f9;
+    }
+    .ticket-card {
+      max-width: 700px;
+      margin: auto;
+      margin-top: 50px;
+      padding: 20px;
+      border-radius: 15px;
+      background: #fff;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    .metro-header {
+      background: linear-gradient(90deg, #ff5722, #e91e63, #9c27b0);
+      color: white;
+      padding: 15px;
+      text-align: center;
+      border-radius: 15px 15px 0 0;
+    }
+  </style>
+    </head>
+    <body>
+
+        <!-- Header -->
+        <div class="metro-header">
+            <h2>Pune Metro Ticket Booking</h2>
+        </div>
+
+        <!-- Ticket Booking Card -->
+        <div class="ticket-card">
+            <form>
+                <!-- Source Station -->
+                <div class="mb-3">
+                    <label for="source" class="form-label">From</label>
+                    <select class="form-select" id="source" required>
+                        <option value>Select Source</option>
+                        <option>PCMC</option>
+                        <option>Sant Tukaram Nagar</option>
+                        <option>Nashik Phata</option>
+                        <option>Kothrud</option>
+                        <option>Kasarwadi</option>
+                        <option>Phugewadi</option>
+                        <option>Bopodi</option>
+                        <option>Khadki</option>
+                        <option>Range Hills</option>
+                        <option>Chh. Shivaji Nagar</option>
+                        <option>Civil Court</option>
+                        <option>Kasba Peth</option>
+                        <option>Mandai</option>
+                        <option>Swargate</option>
+                        <option>Vanaz</option>
+                        <option>Anand Nagar</option>
+                        <option>Ideal Colony</option>
+                        <option>Garware College</option>
+                        <option>Deccan Gymkhana</option>
+                        <option>Chh. Sambhaji Udyan</option>
+                        <option>PMC</option>
+                        <option>Civil Court </option>
+                        <option>Mangalwar Peth</option>
+                        <option>Pune Railway Station</option>
+                        <option>Ruby Hall Clinic</option>
+                        <option>Bund Garden</option>
+                        <option>Yerwada</option>
+                        <option>Kalyani Nagar</option>
+                        <option>Ramwadi</option>
+
+                    </select>
+                </div>
+
+                <!-- Destination Station -->
+                <div class="mb-3">
+                    <label for="destination" class="form-label">To</label>
+                    <select class="form-select" id="destination" required>
+                        <option value>Select Destination</option>
+                        <option>PCMC</option>
+                        <option>Sant Tukaram Nagar</option>
+                        <option>Nashik Phata</option>
+                        <option>Kothrud</option>
+                        <option>Kasarwadi</option>
+                        <option>Phugewadi</option>
+                        <option>Bopodi</option>
+                        <option>Khadki</option>
+                        <option>Range Hills</option>
+                        <option>Chh. Shivaji Nagar</option>
+                        <option>Civil Court</option>
+                        <option>Kasba Peth</option>
+                        <option>Mandai</option>
+                        <option>Swargate</option>
+                        <option>Vanaz</option>
+                        <option>Anand Nagar</option>
+                        <option>Ideal Colony</option>
+                        <option>Garware College</option>
+                        <option>Deccan Gymkhana</option>
+                        <option>Chh. Sambhaji Udyan</option>
+                        <option>PMC</option>
+                        <option>Civil Court </option>
+                        <option>Mangalwar Peth</option>
+                        <option>Pune Railway Station</option>
+                        <option>Ruby Hall Clinic</option>
+                        <option>Bund Garden</option>
+                        <option>Yerwada</option>
+                        <option>Kalyani Nagar</option>
+                        <option>Ramwadi</option>
+                    </select>
+                </div>
+
+                <!-- Number of Tickets -->
+                <div class="mb-3">
+                    <label for="tickets" class="form-label">No. of
+                        Tickets</label>
+                    <input type="number" class="form-control" id="tickets"
+                        placeholder="Enter number" min="1" required>
+                </div>
+
+                <!-- Date of Travel -->
+                <div class="mb-3">
+                    <label for="date" class="form-label">Travel Date</label>
+                    <input type="date" class="form-control" id="date" required>
+                </div>
+
+                <!-- Button -->
+                <button type="submit" class="btn btn-primary w-100">Book
+                    Now</button>
+            </form>
+        </div>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>
