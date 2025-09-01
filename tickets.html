@@ -496,6 +496,28 @@
         margin-top: 10px;
       }
     }
+
+    body {
+      background-color: #f9f9f9;
+    }
+
+    .ticket-card {
+      max-width: 700px;
+      margin: auto;
+      margin-top: 50px;
+      padding: 20px;
+      border-radius: 15px;
+      background: #fff;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .metro-header {
+      background: linear-gradient(90deg, #ff5722, #e91e63, #9c27b0);
+      color: white;
+      padding: 15px;
+      text-align: center;
+      border-radius: 15px 15px 0 0;
+    }
   </style>
 
 
@@ -516,10 +538,10 @@
           <a href="/routes.html">Routes</a>
         </li>
         <li>
-          <a href="tickets.html">Ticket</a>
+          <a href="/tickets.html">Ticket</a>
         </li>
         <li>
-          <a href="contact.html">Contact</a>
+          <a href="/contact.html">Contact</a>
         </li>
         <li>
           <a href="#">About</a>
@@ -533,70 +555,169 @@
   </header>
 
   <main>
-    <!--marquee start-->
+
+    <!-- Ticket Types Section -->
     <section>
-      <marquee style="background-color:#3C3C44; padding-bottom: 10px; color: #CCCCCC;">
-        <span style="margin-right:50px;">Welcome to Pune Metro ! </span>
-        <span style="margin-right:50px;">Customer Care: customercare.pmrp@mahametro.org, 18002705501</span>
-        <span style="margin-right:50px;">|Click Here for Tenders !|</span>
-        <span style="margin-right:50px;">Click Here for Current Vacancies in Pune Metro!</span>
-        <span style="margin-right:50px;">Get a 10% discount on all Metro rides </span>
-      </marquee>
+
+      <!-- Header -->
+      <div class="metro-header">
+        <h2>Pune Metro Ticket Booking</h2>
+      </div>
+
+      <!-- Ticket Booking Card -->
+      <div class="ticket-card">
+        <form>
+          <!-- Source Station -->
+          <div class="mb-3">
+            <label for="source" class="form-label">From</label>
+            <select class="form-select" id="source" required>
+              <option value>Select Source</option>
+              <option>PCMC</option>
+              <option>Sant Tukaram Nagar</option>
+              <option>Nashik Phata</option>
+              <option>Kothrud</option>
+              <option>Kasarwadi</option>
+              <option>Phugewadi</option>
+              <option>Bopodi</option>
+              <option>Khadki</option>
+              <option>Range Hills</option>
+              <option>Chh. Shivaji Nagar</option>
+              <option>Civil Court</option>
+              <option>Kasba Peth</option>
+              <option>Mandai</option>
+              <option>Swargate</option>
+              <option>Vanaz</option>
+              <option>Anand Nagar</option>
+              <option>Ideal Colony</option>
+              <option>Garware College</option>
+              <option>Deccan Gymkhana</option>
+              <option>Chh. Sambhaji Udyan</option>
+              <option>PMC</option>
+              <option>Civil Court </option>
+              <option>Mangalwar Peth</option>
+              <option>Pune Railway Station</option>
+              <option>Ruby Hall Clinic</option>
+              <option>Bund Garden</option>
+              <option>Yerwada</option>
+              <option>Kalyani Nagar</option>
+              <option>Ramwadi</option>
+
+            </select>
+          </div>
+
+          <!-- Destination Station -->
+          <div class="mb-3">
+            <label for="destination" class="form-label">To</label>
+            <select class="form-select" id="destination" required>
+              <option value>Select Destination</option>
+              <option>PCMC</option>
+              <option>Sant Tukaram Nagar</option>
+              <option>Nashik Phata</option>
+              <option>Kothrud</option>
+              <option>Kasarwadi</option>
+              <option>Phugewadi</option>
+              <option>Bopodi</option>
+              <option>Khadki</option>
+              <option>Range Hills</option>
+              <option>Chh. Shivaji Nagar</option>
+              <option>Civil Court</option>
+              <option>Kasba Peth</option>
+              <option>Mandai</option>
+              <option>Swargate</option>
+              <option>Vanaz</option>
+              <option>Anand Nagar</option>
+              <option>Ideal Colony</option>
+              <option>Garware College</option>
+              <option>Deccan Gymkhana</option>
+              <option>Chh. Sambhaji Udyan</option>
+              <option>PMC</option>
+              <option>Civil Court </option>
+              <option>Mangalwar Peth</option>
+              <option>Pune Railway Station</option>
+              <option>Ruby Hall Clinic</option>
+              <option>Bund Garden</option>
+              <option>Yerwada</option>
+              <option>Kalyani Nagar</option>
+              <option>Ramwadi</option>
+            </select>
+          </div>
+
+          <!-- Number of Tickets -->
+          <div class="mb-3">
+            <label for="tickets" class="form-label">No. of
+              Tickets</label>
+            <input type="number" class="form-control" id="tickets" placeholder="Enter number" min="1" required>
+          </div>
+
+          <!-- Date of Travel -->
+          <div class="mb-3">
+            <label for="date" class="form-label">Travel Date</label>
+            <input type="date" class="form-control" id="date" required>
+          </div>
+
+          <!-- Button -->
+          <button type="submit" class="btn btn-primary w-100">Book
+            Now</button>
+        </form>
+      </div>
     </section>
-    <!--marquee end-->
 
-  <!-- Ticket Types Section -->
-<section class="container my-5">
-  <h2 class="text-center mb-4">Types of Tickets</h2>
-  
-  <div class="d-flex justify-content-between flex-wrap text-center gap-3">
-    
-    <div class="card shadow border-0 flex-fill">
-      <div class="card-body">
-        <h5 class="card-title">Single Journey</h5>
-        <p class="card-text">One-way travel between two stations.</p>
-        <a href="single.html" class="stretched-link"></a>
+
+
+    <section class="container my-5">
+      <h2 class="text-center mb-4">Types of Tickets</h2>
+
+
+      <div class="d-flex justify-content-between flex-wrap text-center gap-3">
+
+        <div class="card shadow border-0 flex-fill">
+          <div class="card-body">
+            <h5 class="card-title">Single Journey</h5>
+            <p class="card-text">One-way travel between two stations.</p>
+            <a href="single.html" class="stretched-link"></a>
+          </div>
+        </div>
+
+        <div class="card shadow border-0 flex-fill">
+          <div class="card-body">
+            <h5 class="card-title">Return Journey</h5>
+            <p class="card-text">Travel to your destination and return with one ticket.</p>
+            <a href="return.html" class="stretched-link"></a>
+          </div>
+        </div>
+
+        <div class="card shadow border-0 flex-fill">
+          <div class="card-body">
+            <h5 class="card-title">Day Pass</h5>
+            <p class="card-text">Unlimited rides for one day.</p>
+            <a href="daypass.html" class="stretched-link"></a>
+          </div>
+        </div>
+
+        <div class="card shadow border-0 flex-fill">
+          <div class="card-body">
+            <h5 class="card-title">Monthly Pass</h5>
+            <p class="card-text">Unlimited travel for 30 days – best for daily commuters.</p>
+            <a href="monthly.html" class="stretched-link"></a>
+          </div>
+        </div>
+
+        <div class="card shadow border-0 flex-fill">
+          <div class="card-body">
+            <h5 class="card-title">QR Tickets</h5>
+            <p class="card-text">Book via Pune Metro App and scan at the gate.</p>
+            <a href="qr.html" class="stretched-link"></a>
+          </div>
+        </div>
+
       </div>
-    </div>
-
-    <div class="card shadow border-0 flex-fill">
-      <div class="card-body">
-        <h5 class="card-title">Return Journey</h5>
-        <p class="card-text">Travel to your destination and return with one ticket.</p>
-        <a href="return.html" class="stretched-link"></a>
-      </div>
-    </div>
-
-    <div class="card shadow border-0 flex-fill">
-      <div class="card-body">
-        <h5 class="card-title">Day Pass</h5>
-        <p class="card-text">Unlimited rides for one day.</p>
-        <a href="daypass.html" class="stretched-link"></a>
-      </div>
-    </div>
-
-    <div class="card shadow border-0 flex-fill">
-      <div class="card-body">
-        <h5 class="card-title">Monthly Pass</h5>
-        <p class="card-text">Unlimited travel for 30 days – best for daily commuters.</p>
-        <a href="monthly.html" class="stretched-link"></a>
-      </div>
-    </div>
-
-    <div class="card shadow border-0 flex-fill">
-      <div class="card-body">
-        <h5 class="card-title">QR Tickets</h5>
-        <p class="card-text">Book via Pune Metro App and scan at the gate.</p>
-        <a href="qr.html" class="stretched-link"></a>
-      </div>
-    </div>
-
-  </div>
-</section>
+    </section>
 
 
 
-    
+
+
+
 
   </main>
 
