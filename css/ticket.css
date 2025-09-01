@@ -1,3 +1,4 @@
+ 
     .img {
       width: 100px;
       height: 100px;
@@ -487,3 +488,24 @@
       }
     }
 
+    body {
+      background-color: #f9f9f9;
+    }
+
+    .ticket-card {
+      max-width: 700px;
+      margin: auto;
+      margin-top: 50px;
+      padding: 20px;
+      border-radius: 15px;
+      background: #fff;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .metro-header {
+      background: linear-gradient(90deg, #ff5722, #e91e63, #9c27b0);
+      color: white;
+      padding: 15px;
+      text-align: center;
+      border-radius: 15px 15px 0 0;
+    }

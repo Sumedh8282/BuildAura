@@ -1,0 +1,164 @@
+
+    body {
+      background-color: white;
+    }
+
+    .metro-header {
+      background: linear-gradient(90deg, purple, aqua, rgb(224, 59, 183));
+      color: black;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .route-card1 {
+      border-radius: 12px;
+      box-shadow: 0 4px 10px purple;
+
+      color: purple;
+      transition: transform 0.2s ease-in-out;
+    }
+
+    .route-card2 {
+      border-radius: 12px;
+      box-shadow: 0 4px 10px aqua;
+      transition: transform 0.2s ease-in-out;
+    }
+
+    .route-card3 {
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgb(224, 59, 183);
+      transition: transform 0.2s ease-in-out;
+    }
+
+    .route-card1:hover {
+      transform: scale(1.03);
+    }
+
+    .route-card2:hover {
+      transform: scale(1.03);
+    }
+
+    .route-card3:hover {
+      transform: scale(1.03);
+    }
+
+    .text-route1 {
+      color: purple;
+
+    }
+
+    .text-route2 {
+      color: aqua;
+
+    }
+
+    .text-route3 {
+      color: rgb(224, 59, 183);
+
+    }
+
+    .list-group-flush1 {
+      background-color: purple;
+      text-decoration-color: purple;
+    }
+
+    .list-group-flush2 {
+      background-color: aqua;
+
+    }
+
+    .list-group-flush3 {
+      background-color: rgb(224, 59, 183);
+    }
+
+    .img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 50%;
+    }
+
+    /* Header css start */
+    .img1 {
+      width: 100px;
+      height: 100px;
+      float: left;
+
+    }
+
+    .unlist {
+      padding: 0;
+      width: 100%;
+      margin: 0 0 0 250px;
+      list-style: none;
+    }
+
+    .navbar {
+      width: 100%;
+      overflow: auto;
+      background-color: #3338A0;
+
+
+    }
+
+    .unlist li {
+      width: 100px;
+      display: block;
+      padding: 20px 15px;
+      text-decoration: none;
+      font-family: arial;
+      color: white;
+      text-align: center;
+      float: left;
+    }
+
+    a:hover {
+      color: #FCC61D;
+      text-transform: uppercase;
+    }
+
+    a {
+      width: 100px;
+      display: block;
+      padding: 8px 15px;
+      text-decoration: none;
+      font-family: arial;
+      color: white;
+      text-align: center;
+
+    }
+
+
+    .bar {
+      float: right;
+      border-radius: 100px;
+      padding: 3px;
+      margin-top: 20px;
+      margin-right: 200px;
+      margin-bottom: 10px;
+      box-shadow: none;
+
+    }
+
+    input {
+      border-radius: 100px;
+      text-align: center;
+    }
+
+    button {
+      border-radius: 100px;
+    }
+
+    /* Footer */
+    footer {
+      background: #3338A0;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 20px;
+    }
+
+
+
+  
+  
