@@ -13,41 +13,82 @@
 </head>
 
 <body>
-    <!--Header Start-->
+  <!-- Header Start-->
   <header class="sticky-top">
     <nav class="navbar navbar-expand-lg navbar-dark" style="background-color:#3338A0;">
-      <div class="container-fluid">        
+      <div class="container-fluid">
+
         <a class="navbar-brand" href="index.html">
-          <img src="images/logo.png" alt="Logo" width="80" height="80" class="d-inline-block align-text-top">
+          <img src="images/logo.png" alt="Logo" width="60" height="60">
         </a>
 
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
           <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-5">
-            <li class="nav-item"><a class="nav-link text-white link-warning" href="index.html">Home</a></li>
-            <li class="nav-item ms-5"><a class="nav-link text-white link-warning" href="routes.html">Routes</a></li>
-            <li class="nav-item ms-5"><a class="nav-link text-white link-warning" href="tickets.html">Ticket</a></li>
-            <li class="nav-item ms-5"><a class="nav-link text-white link-warning" href="contact.html">Contact</a></li>
-            <li class="nav-item ms-5"><a class="nav-link text-white link-warning" href="about.html">About</a></li>
+
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+            <li class="nav-item">
+              <a class="nav-link text-white" href="index.html">Home</a>
+            </li>
+            <li class="nav-item ms-lg-4">
+              <a class="nav-link text-white" href="routes.html">Routes</a>
+            </li>
+            <li class="nav-item ms-lg-4">
+              <a class="nav-link text-white" href="tickets.html">Ticket</a>
+            </li>
+            <li class="nav-item ms-lg-4">
+              <a class="nav-link text-white" href="contact.html">Contact</a>
+            </li>
+            <li class="nav-item ms-lg-4">
+              <a class="nav-link text-white" href="about.html">About</a>
+            </li>
           </ul>
 
-          <form class="d-flex" role="search">
+          <form class="d-flex">
             <input class="form-control me-2 rounded-pill text-center" type="search" placeholder="Search Here">
             <button class="btn btn-warning rounded-pill" type="submit">Search</button>
           </form>
+
         </div>
       </div>
     </nav>
   </header>
+  <!--Header End-->
 
+  <!-- Bar Start -->
+  <div class="bg-dark text-warning py-2">
 
-  <!--Header end-->
+    <marquee direction="left" scrollamount="6">
 
+      <span class="text-light mx-4">
+        Welcome to Pune Metro
+      </span>
+
+      <span class="mx-4">
+        Customer Care: 1800 270 5501
+      </span>
+
+      <a href="tickets.html" class="text-decoration-none fw-bold text-warning mx-4">
+        🎟 Book Tickets
+      </a>
+
+      <a href="routes.html" class="text-decoration-none fw-bold text-info mx-4">
+        🚆 Get Routes
+      </a>
+
+      <span class=" mx-4">
+        Get a 10% discount on all Metro rides
+      </span>
+
+    </marquee>
+
+  </div>
+  <!--Bar End-->
   <main>
+
+
 
     <!-- Ticket Types Section -->
     <section>
@@ -214,68 +255,54 @@
 
   </main>
 
-  <!-- Footer -->
-  <section>
-    <footer class="bg-dark text-light pt-5 pb-3">
-      <div class="container">
-        <div class="row">
+  <!--Footer Start -->
+  <footer class="bg-dark text-light pt-5">
+    <div class="container">
+      <div class="row">
 
-          <!-- About Pune Metro -->
-          <div class="col-md-4 mb-4">
-            <h5 class="text-warning">About Pune Metro</h5>
-            <p>
-              Pune Metro Rail Project is a rapid transit system serving Pune city.
-              It provides safe, fast, reliable and eco-friendly transportation
-              across major routes including Purple and Aqua lines.
-            </p>
-          </div>
-
-          <!-- Quick Links -->
-          <div class="col-md-2 mb-4">
-            <h5 class="text-warning">Quick Links</h5>
-            <ul class="list-unstyled">
-              <li><a href="index.html" class="text-light text-decoration-none">Home</a></li>
-              <li><a href="routes.html" class="text-light text-decoration-none">Routes</a></li>
-              <li><a href="tickets.html" class="text-light text-decoration-none">Tickets</a></li>
-              <li><a href="contact.html" class="text-light text-decoration-none">Contact</a></li>
-              <li><a href="about.html" class="text-light text-decoration-none">About</a></li>
-            </ul>
-          </div>
-
-          <!-- Contact Info -->
-          <div class="col-md-3 mb-4">
-            <h5 class="text-warning">Contact Info</h5>
-            <p class="mb-1">📍 Pune Metro Rail Corporation Ltd.</p>
-            <p class="mb-1">Pune, Maharashtra, India</p>
-            <p class="mb-1">📞 1800 270 5501</p>
-            <p class="mb-1">✉ customercare.pmrp@mahametro.org</p>
-          </div>
-
-          <!-- Services -->
-          <div class="col-md-3 mb-4">
-            <h5 class="text-warning">Services</h5>
-            <ul class="list-unstyled">
-              <li>✔ Smart Card Facility</li>
-              <li>✔ QR Code Tickets</li>
-              <li>✔ Online Booking</li>
-              <li>✔ Customer Support</li>
-            </ul>
-          </div>
-
-        </div>
-
-        <hr class="border-secondary">
-
-        <!-- Bottom Footer -->
-        <div class="text-center">
-          <p class="mb-1">© 2026 Pune Metro. All Rights Rese
-            rved.</p>
-          <p class="mb-0">
-            Designed by <span class="text-warning fw-bold">BuildAura</span>
+        <div class="col-md-4 mb-4">
+          <h5 class="text-warning">About Pune Metro</h5>
+          <p>
+            Pune Metro provides safe, fast, reliable and eco-friendly
+            transportation across major routes in the city.
           </p>
         </div>
+
+        <div class="col-md-2 mb-4">
+          <h5 class="text-warning">Quick Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-light text-decoration-none">Home</a></li>
+            <li><a href="#" class="text-light text-decoration-none">Routes</a></li>
+            <li><a href="#" class="text-light text-decoration-none">Tickets</a></li>
+            <li><a href="#" class="text-light text-decoration-none">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-3 mb-4">
+          <h5 class="text-warning">Contact Info</h5>
+          <p>📍 Pune, Maharashtra</p>
+          <p>📞 1800 270 5501</p>
+          <p>✉ customercare.pmrp@mahametro.org</p>
+        </div>
+
+        <div class="col-md-3 mb-4">
+          <h5 class="text-warning">Services</h5>
+          <ul class="list-unstyled">
+            <li>✔ Smart Card</li>
+            <li>✔ QR Tickets</li>
+            <li>✔ Online Booking</li>
+            <li>✔ Customer Support</li>
+          </ul>
+        </div>
+
       </div>
-    </footer>
+    </div>
+
+    <div class="text-center py-3" style="background-color:#3338A0;">
+      © 2026 Pune Metro | Designed by BuildAura
+    </div>
+  </footer>
+  <!-- Footer End -->
 </body>
 
 </html>
